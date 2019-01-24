@@ -4,14 +4,13 @@
     tools:context=".MainActivity">
 
     <data>
-
         <variable
             name="user1"
             type="com.cumulations.databindinglibrarydemoapp.User" />
 
         <variable
             name="clickHandler1"
-            type="com.cumulations.databindinglibrarydemoapp.MainActivity.ClickHandler" />
+            type="com.cumulations.databindinglibrarydemoapp.MainActivity.ClickHandler1" />
     </data>
 
     <LinearLayout

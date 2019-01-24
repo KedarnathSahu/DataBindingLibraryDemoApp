@@ -11,8 +11,12 @@
             type="com.cumulations.databindinglibrarydemoapp.User" />
 
         <variable
-            name="clickHandler"
-            type="com.cumulations.databindinglibrarydemoapp.MainActivity.ClickHandler" />
+            name="clickHandler1"
+            type="com.cumulations.databindinglibrarydemoapp.MainActivity.ClickHandler1" />
+
+        <variable
+            name="clickHandler2"
+            type="com.cumulations.databindinglibrarydemoapp.MainActivity.ClickHandler2" />
     </data>
 
     <LinearLayout
@@ -21,38 +25,56 @@
         android:background="#BB86FC"
         android:orientation="vertical">
 
-        <LinearLayout
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="#3700B3"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:fillViewport="true">
 
-            <TextView
-                android:id="@+id/first_name"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:textColor="#FFFFFF"
-                android:text="@{user.firstName}"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/last_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#FFFFFF"
-                android:layout_margin="8dp"
-                android:text="@{user.lastName}"
-                android:textSize="22sp"
-                android:textStyle="bold" />
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="#3700B3"
+                    android:orientation="vertical">
 
-        <include
-            android:id="@+id/content"
-            layout="@layout/containt_main"
-            bind:user1="@{user}"
-            bind:clickHandler1="@{clickHandler}"/>
+                    <TextView
+                        android:id="@+id/first_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="@{user.firstName}"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/last_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="@{user.lastName}"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/content1"
+                    layout="@layout/containt_main_1"
+                    bind:clickHandler1="@{clickHandler1}"
+                    bind:user1="@{user}" />
+
+                <include
+                    android:id="@+id/content2"
+                    layout="@layout/containt_main_2"
+                    bind:clickHandler2="@{clickHandler2}"
+                    bind:user2="@{user}" />
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 </layout>
