@@ -31,8 +31,17 @@ public class MainActivity extends AppCompatActivity {
             this.context = context;
         }
 
-        public void onClickOk(View view) {
-             Toast.makeText(context, "simpleButtonClick", Toast.LENGTH_SHORT).show();
+        public void onClick(View view) {
+            Toast.makeText(context, "onSimpleClick", Toast.LENGTH_SHORT).show();
+        }
+
+        public boolean onLongClick(View view) {
+            Toast.makeText(context, "onSimpleLongClick", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        public void onClickWithParameters(View view, User user) {
+            Toast.makeText(context, user.firstName + " " + user.lastName, Toast.LENGTH_SHORT).show();
         }
     }
 

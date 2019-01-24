@@ -48,7 +48,26 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="8dp"
-            android:onClick="@{clickHandler1::onClickOk}"
-            android:text="ok" />
+            android:onClick="@{clickHandler1::onClick}"
+            android:text="Click"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:onLongClick="@{clickHandler1::onLongClick}"
+            android:text="Long Click"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:onClick="@{(v)->clickHandler1.onClickWithParameters(v,user1)}"
+            android:text="Click with Parameters"
+            android:textAllCaps="false" />
     </LinearLayout>
 </layout>
