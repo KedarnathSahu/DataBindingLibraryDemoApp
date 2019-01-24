@@ -9,6 +9,10 @@
         <variable
             name="user"
             type="com.cumulations.databindinglibrarydemoapp.User" />
+
+        <variable
+            name="clickHandler"
+            type="com.cumulations.databindinglibrarydemoapp.MainActivity.ClickHandler" />
     </data>
 
     <LinearLayout
@@ -44,8 +48,9 @@
         </LinearLayout>
 
         <include
-            android:id="@+id/content1"
+            android:id="@+id/content"
+            layout="@layout/containt_main"
             bind:user1="@{user}"
-            layout="@layout/containt_main" />
+            bind:clickHandler1="@{clickHandler}"/>
     </LinearLayout>
 </layout>

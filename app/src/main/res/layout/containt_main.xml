@@ -8,6 +8,10 @@
         <variable
             name="user1"
             type="com.cumulations.databindinglibrarydemoapp.User" />
+
+        <variable
+            name="clickHandler1"
+            type="com.cumulations.databindinglibrarydemoapp.MainActivity.ClickHandler" />
     </data>
 
     <LinearLayout
@@ -38,5 +42,13 @@
             android:textColor="#FFFFFF"
             android:textSize="22sp"
             android:textStyle="bold" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:onClick="@{clickHandler1::onClickOk}"
+            android:text="ok" />
     </LinearLayout>
 </layout>
